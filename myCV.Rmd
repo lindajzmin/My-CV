@@ -44,13 +44,37 @@ library(sfnetworks)
 
 
 
-\paragraphstyle{Soy ingeniera en auditoría de Guayaquil, Ecuador especializada en técnicas cuantitativas para la mejora de procesos. Analizo los datos de fuentes internas y/o externas para proporcionar información relevante a gerentes o ejecutivos que les ayude a tomar decisiones que se traduzcan en un mejor rendimiento y productividad para la empresa. Me siento muy interesada en continuar mi carrera como una científica de datos.}
+\paragraphstyle{Soy ingeniera en auditoría graduada en Guayaquil (Ecuador) especializada en técnicas cuantitativas para la mejora de procesos. Analizo los datos de fuentes internas y/o externas para proporcionar información relevante a gerentes o ejecutivos que les ayude a tomar decisiones que se traduzcan en un mejor rendimiento y productividad para la empresa. Me siento muy interesada en continuar mi carrera como una científica de datos.}
 
 
-<!-- | Nacionalidad: Ecuatoriana, Cumpleaños: 24/05/1987 -->
+\section{\faBookmark Experiencia Enseñando}
 
+```{r teaching}
+tribble(
+  ~ organization, ~ puesto, ~ loc, ~ dates, ~ details,
+    "Universidad Técnica de Machala", "Profesora universitaria a tiempo completo","Machala, EC", "04, 2019 - 09, 2022", "Cátedra de Estadística, Cálculo y Ecuaciones Diferenciales",
+    "Universidad Técnica de Machala", "Profesora universitaria a tiempo completo","Machala, EC", "04, 2019 - 09, 2022", "Miembro del Comité de Gestión y Acreditación de la Calidad. Gestión de indicadores.",
+    "Universidad Técnica de Machala", "Profesora universitaria a tiempo completo","Machala, EC", "04, 2019 - 09, 2022", "Community Manager de la Carrera de Alimentos. URL:  \\textit{ https://www.facebook.com/alimentosutmach} ",
+  "The Carpentries", "Facilitadora del Taller Control de Versiones con Git", "Virtual", "09, 2022", "Taller realizado por la Semana de la Ciencia de la Universidad Técnica de Machala 2022 avalado por la Maestría de Software.",
+  "Sociedad Ecuatoriana de Estadística", "Facilitadora del Curso Manejo de Datos con R", "Virtual", "05, 2022", "Curso de aprobación de 20 horas sincrónicas, 20 estudiantes.",
+  "The Carpentries", "Facilitadora del Taller Control de Versiones con Git", "Virtual", "04, 2022", "Taller realizado en streaming para el Festival Latinoamericano de Software Libre Flisol 2022."
+) |> 
+  detailed_entries(organization, dates, puesto, loc, details, .protect=FALSE)
+```
 
 \section{\faBriefcase Experiencia Profesional}
+
+```{r experience}
+tribble(
+  ~ organization, ~ puesto, ~ loc, ~ dates, ~ details,
+  "Secretaría Técnica del Fideicomiso", "Asesora Financiera", "Quito, EC", "08, 2021 - 11, 2021", "Análisis financieros de los resultados de 23 compañías pertenecientes al Fideicomiso para su liquidación.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Jefa Administrativa-Financiera", "Machala, EC", "04, 2013 - 02, 2017", "Gestión y Control de las áreas de Talento Humano, Servicios Generales, Seguros, Inventarios y Compras.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Jefa Administrativa-Financiera", "Machala, EC", "04, 2013 - 02, 2017", "Reducción de los costos administrativos. Mejora de los procesos de inventarios, talento humano y servicios generales.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Asistente de Programación y Gestión de la Calidad", "Machala, EC", "04, 2013 - 02, 2017", "Responsable del sistema de gestión de calidad.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Asistente de Programación y Gestión de la Calidad", "Machala, EC", "04, 2013 - 02, 2017", "Gestión y control de indicadores de la empresa. Planificación estratégica."
+) |> 
+  detailed_entries(organization, dates, puesto, loc, details, .protect=FALSE)
+```
 
 
 
@@ -68,12 +92,27 @@ tribble(
 ```
 
 
+\section{\faCertificate Certificaciones}
+
+```{r dist}
+tribble(
+  ~ area, ~ org, ~ date,
+    "Software Carpentry Instructor", "The Carpentries", "2021",
+  "Científica de Datos - Sociedad Ecuatoriana de Estadística", "SEE", "2021"
+) |> 
+  brief_entries(what = area, when = date, with = org, .protect = F)
+```
+
+
 \section{\faHeart Voluntariado}
 
 ```{r vol}
 tribble(
   ~ desc, ~ date,
-  "Group Peer Mentor in Women in Geospatial+ Mentorship Program", "2020-2021"
+  "Co-organizadora de RLadies Guayaquil. Twitter: \\textit{https://twitter.com/RLadiesGye}", "2021-2022",
+  "Voluntaria, Sociedad Ecuatoriana de Estadística", "2021-2022",
+  "Embajadora de Women in Data Science Machala 2022, Universidad Stanford", "2022",
+  "Miembro de Comité Organizador, Latin R 2021, Conferencia Latinoamericana del uso de R", "2021"
 ) |> 
   brief_entries(what = desc, when = date, .protect = F)
 ```
@@ -95,8 +134,6 @@ tribble(
   row_spec(1, bold = F, color = "#7f7f7f") |> 
   column_spec(column = 1:4, width = '4cm')
 ```
-
-
 
 
 
