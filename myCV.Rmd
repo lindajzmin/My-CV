@@ -5,6 +5,7 @@ address: |
          | San Miguel 11, 18194 Granada, España
 profilepic: linda.jpeg
 phone: +34 624 609 588 
+www: lindajzmin-website.netlify.app
 email: "lindaj.cabrera@gmail.com"
 twitter: lindajzmin
 github: lindajzmin
@@ -15,15 +16,6 @@ output:
   vitae::awesomecv:
     keep_tex: false
 always_allow_html: yes
-header-includes:
-  \usepackage{float}
-  \usepackage{multicol}
-  \usepackage{colortbl}
-  \arrayrulecolor{white}
-  \usepackage{hhline}
-  \definecolor{light-gray}{gray}{0.95}
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -41,7 +33,6 @@ library(sf)
 library(rnaturalearth)
 library(sfnetworks)
 ```
-
 
 
 \paragraphstyle{Soy ingeniera en auditoría graduada en Guayaquil (Ecuador) especializada en técnicas cuantitativas para la mejora de procesos. Analizo los datos de fuentes internas y/o externas para proporcionar información relevante a gerentes o ejecutivos que les ayude a tomar decisiones que se traduzcan en un mejor rendimiento y productividad para la empresa. Me siento muy interesada en continuar mi carrera como una científica de datos.}
@@ -134,6 +125,5 @@ tribble(
   row_spec(1, bold = F, color = "#7f7f7f") |> 
   column_spec(column = 1:4, width = '4cm')
 ```
-
 
 
