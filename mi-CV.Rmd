@@ -112,7 +112,7 @@ tribble(
   "Sociedad Ecuatoriana de Estadística", "Instructora de Software (remoto)"," ", "04, 2022 - presente", "Instructora del curso Manipulación de datos con R",
   "R-Ladies Guayaquil", "Co-organizadora (remoto)", " ", "04, 2021 - presente", "Organización de talleres y eventos virtuales para la enseñanza de R y sus aplicaciones.", 
     "R-Ladies Guayaquil", "Co-organizadora (remoto)", " ", "04, 2021 - presente", "Colaboración en la organización de conferencias regionales e internacionales de la comunidad de R.", 
-  "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Cátedra de Cálculo y Ecuaciones Diferenciales",
+  "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Cátedra de Cálculo, Estadística y Ecuaciones Diferenciales",
   "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Miembro del Comité de Gestión y Acreditación de la Calidad. Gestión de indicadores.",
   "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Creadora de la fan page de la Carrera de Alimentos y Community Manager. URL:  \\textit{ https://www.facebook.com/alimentosutmach} ",
   "Corporación Eléctrica del Ecuador CELEC EP", "Asistente de Programación y Gestión de la Calidad", "Machala, EC", "04, 2013 - 02, 2017", "Implementación y Responsable del Sistema de Gestión de Calidad ISO 9001-2015.",

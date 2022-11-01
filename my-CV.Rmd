@@ -1,0 +1,196 @@
+---
+name: Linda Cabrera-Orellana
+position: "Data Scientist"
+address: |
+         | San Miguel 11, 18194 Granada, España
+profilepic: linda.jpeg
+phone: +34 624 609 588 
+www: lindajzmin-website.netlify.app
+email: "lindaj.cabrera@gmail.com"
+twitter: lindajzmin
+github: lindajzmin
+linkedin: lindajzmin
+headcolor: 009ACD
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+always_allow_html: yes
+header-includes: |
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(ggplot2)
+library(dplyr)
+library(ggrepel)
+library(emojifont)
+library(fontawesome)
+library(kableExtra)
+library(huxtable)
+library(gridExtra)
+library(sf)
+library(rnaturalearth)
+library(sfnetworks)
+```
+
+
+\paragraphstyle{I am a data scientist with a passion for data communication and data visualization. I have a background in mathematics and quantitative techniques for business management. I am currently working as online software instructor at Sociedad Ecuatoriana de Estadística.}
+
+
+\section{\faGears Skills}
+
+\subsection{Technical}
+
+```{r techtable, results='markup'}
+tribble(
+   ~`Data Processing`, ~`Data Visualization`, ~Marketing, ~Others,
+  "R -- Python -- MS Excel -- SPSS",
+  "Power BI -- Shiny",
+  "Google Analytics-- Canva",
+  "SQL -- Git -- GitHub -- LaTeX"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#009acd") |> 
+  row_spec(1, bold = F, color = "#7f7f7f") |> 
+  column_spec(column = 1:4, width = '4cm')
+```
+
+\subsection{Soft}
+
+* Problem solving, Teamwork and Critical Thinking
+* Initiative and Adaptability
+* Compromise and Responsibility
+
+
+\section{\faCode Projects}
+
+```{r dev}
+tribble(
+  ~ name, ~ sum, ~ acronym, ~ type, ~ lang, ~ link,
+  "Twitter data mining, text analysis, sentiment analysis and LDA.", 
+  "Text Mining: Twitter data mining, text analysis, sentiment analysis and LDA.",
+  "\\href{https://github.com/lindajzmin/text_mining}{\\tiny{\\faLink}}", 
+  "Text Mining",
+  "R",
+  "\\href{https://github.com/lindajzmin/text_mining}{\\faGithub}",
+  
+  "Prospecting of cardholder consumption based on the line of business.", 
+  "Data Science: Prospecting of cardholder consumption based on the line of business.", 
+  "\\href{https://github.com/lindajzmin/project_datascience}{\\tiny{\\faLink}}", 
+  "Clustering",
+  "R",
+  "\\href{https://github.com/lindajzmin/project_datascience}{\\faGithub}",
+
+  "My web-site: Linda Cabrera", 
+  "Linda Cabrera: Website contains my portfolio, posts and projects about data science and education.", 
+  "Blog \\href{https://github.com/lindajzmin/mi_sitioweb}{\\tiny{\\faLink}}", 
+  "Web-Site",
+  "Html - CSS - R",
+  "\\href{https://github.com/lindajzmin/mi_sitioweb}{\\faGlobe}"
+) |> 
+  brief_entries(with = lang, what = sum, when = link, .protect=FALSE)  
+```
+
+
+
+\section{\faBriefcase Professional Experience}
+
+```{r experience}
+tribble(
+  ~ organization, ~ puesto, ~ loc, ~ dates, ~ details,
+  "Sociedad Ecuatoriana de Estadística", "Software Instructor (remote)"," ", "04, 2022 - present", "Instructor of the \\textit{Software Management} module of the International Program for Statistics Applied to Scientific Research.",
+  "Sociedad Ecuatoriana de Estadística", "Software Instructor (remote)"," ", "04, 2022 - present", "Instructor of the course Data Manipulation with R.",
+  "R-Ladies Guayaquil", "Co-organizer (remote)", " ", "04, 2021 - present", "Organization of workshops and virtual events for the teaching of R and its applications.", 
+    "R-Ladies Guayaquil", "Co-organizer (remote)", " ", "04, 2021 - present", "Collaboration in the organization of regional and international conferences of the R community.", 
+  "Universidad Técnica de Machala", "Full-time Teacher (hybrid)","Machala, EC", "04, 2019 - 09, 2022", "Chair of Calculus, Statistics and Differential Equations.",
+  "Universidad Técnica de Machala", "Full-time Teacher (hybrid)","Machala, EC", "04, 2019 - 09, 2022", "Member of the Quality Management and Accreditation Committee. Management of indicators.",
+  "Universidad Técnica de Machala", "Full-time Teacher (hybrid)","Machala, EC", "04, 2019 - 09, 2022", "Creator of the fan page of the Food Engineering Career and Community Manager. URL:  \\textit{ https://www.facebook.com/alimentosutmach} ",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Programming and Quality Management Assistant", "Machala, EC", "04, 2013 - 02, 2017", "Implementation and Responsible for the Quality Management System ISO 9001-2015.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Programming and Quality Management Assistant", "Machala, EC", "04, 2013 - 02, 2017", "Design and development of reports, dashboards or other tools for monitoring strategic information in MS Excel.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Programming and Quality Management Assistant", "Machala, EC", "04, 2013 - 02, 2017", "Process management, control and monitoring of company indicators.",
+  "Corporación Eléctrica del Ecuador CELEC EP", "Programming and Quality Management Assistant", "Machala, EC", "04, 2013 - 02, 2017", "Optimization of the inventory process. 30\\% annual reduction in inventory cost."
+) |> 
+  detailed_entries(organization, dates, puesto, loc, details, .protect=FALSE)
+```
+
+
+\section{\faUniversity Education}
+
+```{r education}
+tribble(
+  ~ study, ~ university, ~ loc, ~ dates, ~ details,
+    "Máster en Investigación Matemática", "Universitat Politècnica de València \\& Universitat de València","Valencia, SP", "2017 - 2018", "Methodological tools in mathematical research, Introduction to mathematical research, Mathematical modeling in industry, Applied Mathematics.",
+    "Máster en Investigación Matemática", "Universitat Politècnica de València \\& Universitat de València","Valencia, SP", "2017 - 2018", "TFM: Algoritmos matemáticos para el tratamiento de señales financieras. URL: \\textit{http://hdl.handle.net/10251/111119}",
+    "Ingeniera en Auditoría", "Escuela Superior Politécnica del Litoral", "Guayaquil, EC", "2009 - 2014", "Quantitative Methods 1-3, Financial Mathematics, Inferential Statistics, Sampling and Survey Design, Financial Administration, Database for Auditors, Sampling and Multivariate Analysis, Quality Engineering, Operational Auditing, Auditing of Computer Applications, among 34 subjects.",
+  "Ingeniera en Auditoría", "Escuela Superior Politécnica del Litoral", "Guayaquil, EC", "2009 - 2014", "Tesis: Diseño de un sistema de gestión por procesos, aplicado a una empresa dedicada a la rectificación de motores. URL: \\textit{http://www.dspace.espol.edu.ec/xmlui/handle/123456789/39500}"
+) |> 
+  detailed_entries(study, dates, university, loc, details, .protect=FALSE)
+```
+
+
+
+\subsection{\faLightbulbO Courses}
+
+```{r presentations}
+tribble(
+  ~ title, ~ link, ~ event, ~ date,
+  "Women in Data Science Ecuador", "Universidad de Stanford - Sociedad Ecuatoriana de Estadística", " ", "04, 2022",
+  "Bioestadística aplicada a la investigación científica", "Sociedad Ecuatoriana de Estadística", " ", "02, 2022",
+  "useR! 2021 The R Conference", "The R Foundation for Statistical Computing c/o Institute for Statistics and Mathematics", " ", "07, 2021",
+  "X Seminario Internacional de Estadística Aplicada", "Sociedad Ecuatoriana de Estadística", " ", "05, 2021",
+  "Análisis de redes sociales usando Procesamiento de Lenguaje Natural", "Sociedad Ecuatoriana de Estadística", " ", "01, 2021",
+  "Visualización y Analítica de Datos con Power BI", "SolOpt S.A.", " ", "07, 2020",
+  "Getting and Cleaning Data","EdX", " ", "05, 2020",
+  "R Programming","EdX", " ", "04, 2020"
+) |> 
+  detailed_entries(with = title, what = link, where = event, when = date, .protect=FALSE)  
+```
+
+
+
+\section{\faCertificate Certifications}
+
+```{r dist}
+tribble(
+  ~ area, ~ org, ~ date,
+    "Software Carpentry Instructor", "The Carpentries", "2021",
+  "Data Scientist - Sociedad Ecuatoriana de Estadística", "SEE", "2021"
+) |> 
+  brief_entries(what = area, when = date, with = org, .protect = F)
+```
+
+
+\section{\faUser Memberships}
+
+```{r org}
+tribble(
+  ~ org, ~ date,
+  "R-Ladies Global \\href{https://twitter.com/RLadiesGye}{\\tiny{\\faLink}}", "since 2021",
+  "Women in Data Science \\href{https://www.widsconference.org/ambassadors-2022.html}{\\tiny{\\faLink}}", "since 2022",
+  "Organizing Committee, Latin R 2021, Latin American Conference for the use of R", "2021"
+) |> 
+  brief_entries(what = org, when = date, .protect = F)
+```
+
+
+\section{\faLanguage Languages}
+
+* English:
+    - Reading/Listening: Intermediate
+    - Speech: Intermediate
+
+* Spanish: Native
+
+
+
