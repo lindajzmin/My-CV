@@ -1,6 +1,6 @@
 ---
 name: Linda Cabrera-Orellana
-position: "Científica de Datos"
+position: "Data Scientist"
 address: |
          | San Miguel 11, 18194 Granada, España
 profilepic: linda.jpeg
@@ -16,6 +16,15 @@ output:
   vitae::awesomecv:
     keep_tex: false
 always_allow_html: yes
+header-includes: |
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -35,7 +44,37 @@ library(sfnetworks)
 ```
 
 
-\paragraphstyle{Soy ingeniera en auditoría graduada en Guayaquil (Ecuador) especializada en técnicas cuantitativas para la mejora de procesos. Analizo los datos de fuentes internas y/o externas para proporcionar información relevante a gerentes o ejecutivos que les ayude a tomar decisiones que se traduzcan en un mejor rendimiento y productividad para la empresa. Me siento muy interesada en continuar mi carrera como una científica de datos.}
+\paragraphstyle{I am a data scientist with a passion for data communication and data visualization. I have a background in mathematics and quantitative techniques for business management. I am currently working as online software instructor at Sociedad Ecuatoriana de Estadística.}
+
+
+\section{\faGears Skills}
+
+\subsection{Technical}
+
+```{r techtable, results='markup'}
+tribble(
+   ~`Data Processing`, ~`Data Visualization`, ~Marketing, ~Others,
+  "R -- Python -- MS Excel -- SPSS",
+  "Power BI -- Shiny",
+  "Google Analytics-- Canva",
+  "SQL -- Git -- GitHub -- LaTeX"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#009acd") |> 
+  row_spec(1, bold = F, color = "#7f7f7f") |> 
+  column_spec(column = 1:4, width = '4cm')
+```
+
+\subsection{Soft}
+
+* Problem solving, Teamwork and Critical Thinking
+* Initiative and Adaptability
+* Compromise and Responsibility
+
+
+\section{\faBriefcase Projects}
+
 
 
 \section{\faBookmark Experiencia Enseñando}
@@ -108,22 +147,5 @@ tribble(
   brief_entries(what = desc, when = date, .protect = F)
 ```
 
-
-\section{\faGears Habilidades}
-
-```{r techtable, results='markup'}
-tribble(
-   ~Programación, ~Maketing , ~Otro, ~Lenguajes,
-  "R -- Python -- SQL -- Git -- LaTeX",
-  "Google Analytics -- Canva",
-  "Power BI -- Excel -- SPSS",
-  "Español: Nativo -- Inglés: B2"
-) |>
-  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
-  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
-  row_spec(0, bold = T, color = "#009acd") |> 
-  row_spec(1, bold = F, color = "#7f7f7f") |> 
-  column_spec(column = 1:4, width = '4cm')
-```
 
 
