@@ -110,6 +110,8 @@ tribble(
   ~ organization, ~ puesto, ~ loc, ~ dates, ~ details,
   "Sociedad Ecuatoriana de Estadística", "Instructora de Software (remoto)"," ", "04, 2022 - presente", "Instructora del módulo \\textit{Manejo de Software} del Programa Internacional de Estadística aplicada a la Investigación Científica",
   "Sociedad Ecuatoriana de Estadística", "Instructora de Software (remoto)"," ", "04, 2022 - presente", "Instructora del curso Manipulación de datos con R",
+  "R-Ladies Guayaquil", "Co-organizadora (remoto)", " ", "04, 2021 - presente", "Organización de talleres y eventos virtuales para la enseñanza de R y sus aplicaciones.", 
+    "R-Ladies Guayaquil", "Co-organizadora (remoto)", " ", "04, 2021 - presente", "Colaboración en la organización de conferencias regionales e internacionales de la comunidad de R.", 
   "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Cátedra de Cálculo y Ecuaciones Diferenciales",
   "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Miembro del Comité de Gestión y Acreditación de la Calidad. Gestión de indicadores.",
   "Universidad Técnica de Machala", "Profesora a tiempo completo (híbrido)","Machala, EC", "04, 2019 - 09, 2022", "Creadora de la fan page de la Carrera de Alimentos y Community Manager. URL:  \\textit{ https://www.facebook.com/alimentosutmach} ",
@@ -150,7 +152,9 @@ tribble(
 tribble(
   ~ study, ~ university, ~ loc, ~ dates, ~ details,
     "Máster en Investigación Matemática", "Universitat Politècnica de València \\& Universitat de València","Valencia, ES", "2017 - 2018", "Herramientas metodológicas en la investigación matemática, Iniciación a la investigación matemàtica, Modelización matemática en la industria, Matemática Aplicada.",
-    "Máster en Investigación Matemática", "Universitat Politècnica de València \\& Universitat de València","Valencia, ES", "2017 - 2018", "TFM: Algoritmos matemáticos para el tratamiento de señales financieras. URL: \\textit{http://hdl.handle.net/10251/111119}"
+    "Máster en Investigación Matemática", "Universitat Politècnica de València \\& Universitat de València","Valencia, ES", "2017 - 2018", "TFM: Algoritmos matemáticos para el tratamiento de señales financieras. URL: \\textit{http://hdl.handle.net/10251/111119}",
+    "Ingeniera en Auditoría", "Escuela Superior Politécnica del Litoral", "Guayaquil, EC", "2009 - 2014", "Métodos cuantitativos 1-3, Matemáticas Financieras, Estadística Inferencial, Muestreo y Diseño de Cuestionarios, Administración Financiera, Base de Datos para Auditores, Muestreo y Análisis Multivariado, Ingeniería de la Calidad, Auditoría Operacional, Auditoría Aplic. Informáticas, entre 34 asignaturas.",
+  "Ingeniera en Auditoría", "Escuela Superior Politécnica del Litoral", "Guayaquil, EC", "2009 - 2014", "Tesis: Diseño de un sistema de gestión por procesos, aplicado a una empresa dedicada a la rectificación de motores. URL: \\textit{http://www.dspace.espol.edu.ec/xmlui/handle/123456789/39500}"
 ) |> 
   detailed_entries(study, dates, university, loc, details, .protect=FALSE)
 ```
@@ -174,6 +178,23 @@ tribble(
 
 -->
 
+
+\subsection{\faLightbulbO Cursos}
+
+```{r presentations}
+tribble(
+  ~ title, ~ link, ~ event, ~ date,
+  "Women in Data Science Ecuador", "Universidad de Stanford - Sociedad Ecuatoriana de Estadística", " ", "04, 2022",
+  "Bioestadística aplicada a la investigación científica", "Sociedad Ecuatoriana de Estadística", " ", "02, 2022",
+  "useR! 2021 The R Conference", "The R Foundation for Statistical Computing c/o Institute for Statistics and Mathematics", " ", "07, 2021",
+  "X Seminario Internacional de Estadística Aplicada", "Sociedad Ecuatoriana de Estadística", " ", "05, 2021",
+  "Análisis de redes sociales usando Procesamiento de Lenguaje Natural", "Sociedad Ecuatoriana de Estadística", " ", "01, 2021",
+  "Visualización y Analítica de Datos con Power BI", "SolOpt S.A.", " ", "07, 2020",
+  "Getting and Cleaning Data","EdX", " ", "05, 2020",
+  "R Programming","EdX", " ", "04, 2020"
+) |> 
+  detailed_entries(with = title, what = link, where = event, when = date, .protect=FALSE)  
+```
 
 
 
@@ -201,4 +222,12 @@ tribble(
   brief_entries(what = org, when = date, .protect = F)
 ```
 
+
+\section{\faLanguage Idiomas}
+
+* Inglés: 
+   - Lectura/Escucha: Intermedio
+   - Habla: Intermedio
+
+* Español: Nativo
 
