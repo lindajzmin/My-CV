@@ -1,10 +1,7 @@
 ---
 name: Linda Cabrera-Orellana
 position: "Científica de Datos"
-address: |
-         | San Miguel 11, 18194 Granada, España
 profilepic: linda.jpeg
-phone: +34 624 609 588 
 email: "lindaj.cabrera@gmail.com"
 www: lindajzmin-website.netlify.app
 twitter: lindajzmin
